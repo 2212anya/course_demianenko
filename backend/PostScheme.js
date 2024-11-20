@@ -1,15 +1,15 @@
 import mongoose from 'mongoose'
-
-
-const postSchema = new mongoose.Schema({
-    responsible_person: { type: String, required: true },
+  
+  const Schema = new mongoose.Schema({
     rank: { type: String, required: true },
-    itemName: { type: String, required: true },
-    category: { type: Number, required: true },
-    quantity: { type: String, required: true },
-    unit: { type: String, required: true },
-    serialNumber: { type: Number, default: 0 }
-}, {
-    versionKey: false
-});
-export default postSchema
+    name: { type: String, required: true },
+    lastName: { type: String, required: true },
+    date_of_injury: { type: String, required: true },
+    type_of_injury: { type: String, required: true },
+    current_temp: { type: Number, required: true },
+    status: { type: String, required: true }
+  },{
+    versionKey:false
+  });
+
+export default Schema
